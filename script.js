@@ -163,7 +163,7 @@ function initEasterEgg() {
     // 创建彩蛋图片元素
     const easterEgg = document.createElement('img');
     easterEgg.id = 'easter-egg';
-    easterEgg.src = 'sp.PNG';
+    easterEgg.src = 's.png';
     easterEgg.alt = 'Easter Egg';
     easterEgg.style.cssText = `
         position: fixed;
@@ -241,138 +241,61 @@ function showEasterEgg() {
     }, 200);
 }
 
-// 语言切换系统
-let currentLanguage = 'zh'; // 默认中文
-
-// 语言文本映射
+// 语言系统 - 仅保留中文
 const languageTexts = {
-    en: {
-        // 页面元数据
-        htmlLang: 'en',
-        title: 'Minecraft Backroom Modpack',
-        downloadTitle: 'Download Launcher - Minecraft Backroom Modpack',
-        
-        // 导航栏
-        download: 'Download',
-        about: 'About',
-        languageToggle: '中文',
-        backToHome: 'Back to Home',
-        
-        // Logo
-        subtitle: 'Minecraft Modpack',
-        
-        // 海报区域
-        posterAlt: 'Backroom Modpack Poster',
-        
-        // 下载部分
-        downloadSectionTitle: 'Download & Watch',
-        stepsTitle: 'Steps',
-        step1: 'Download the Launcher',
-        step2: 'Watch Tutorial Video',
-        downloadBtn1: 'Download Launcher',
-        downloadBtn2: 'Watch Tutorial',
-        downloadBtn3: 'Skin Settings',
-        
-        // 下载页面
-        downloadPageTitle: 'Download Launcher',
-        downloadPageSubtitle: 'Choose your operating system to download the Backroom Modpack launcher',
-        windowsVersion: 'Windows Version',
-        windowsCompatible: 'Compatible with Windows 10/11',
-        macVersion: 'Mac Version',
-        macCompatible: 'Compatible with macOS 10.14+',
-        fileSize: 'File Size:',
-        version: 'Version:',
-        downloadForWindows: 'Download for Windows',
-        downloadForMac: 'Download for Mac',
-        installationInstructions: 'Installation Instructions',
-        step1Title: 'Download the Launcher',
-        step1Desc: 'Click the download button for your operating system above',
-        step2Title: 'Run the Installer',
-        step2Desc: 'Locate the downloaded file and run the installer',
-        step3Title: 'Follow Setup Wizard',
-        step3Desc: 'Follow the on-screen instructions to complete installation',
-        step4Title: 'Launch and Play',
-        step4Desc: 'Start the launcher and begin your Backroom adventure!',
-        
-        // 注意事项
-        warningTitle: '⚠️ Important Notes',
-        warning1: 'This modpack contains horror elements, play with caution',
-        warning2: 'Recommended for 4-6 players',
-        warning3: 'Use in-game voice chat system',
-        warning4: 'Stop playing immediately if you feel uncomfortable',
-        warning5: 'For any issues, search on Bilibili',
-        
-        // 页脚
-        footer: '© 2025 Backroom Modpack | Minecraft Modding Community',
-        
-        // 教程页面
-        tutorialTitle: 'Tutorial Guide',
-        launcherErrorTitle: 'Launcher Error Solutions',
-        modpackVideoTitle: 'Modpack Installation Video',
-        skinVideoTitle: 'Skin Settings Video',
-        videoDescription: 'Click to play the tutorial video',
-        videoInstructions: 'Watch video to solve errors',
-        launcherErrorInstruction1: 'Watch video to solve errors',
-        modpackInstruction1: 'Download and install the launcher from the download page',
-        modpackInstruction2: 'Launch the Backroom Modpack launcher',
-        modpackInstruction3: 'Wait for mods and resources to download automatically',
-        modpackInstruction4: 'Start your Backroom adventure!',
-        skinInstruction1: 'Access the skin settings menu in the launcher',
-        skinInstruction2: 'Customize your character\'s appearance',
-        skinInstruction3: 'Apply custom skins and textures',
-        skinInstruction4: 'Save your preferences for future sessions',
-
-    },
     zh: {
         // 页面元数据
         htmlLang: 'zh-CN',
-        title: '我的世界 Backroom 整合包',
-        downloadTitle: '下载启动器 - 我的世界 Backroom 整合包',
+        title: '我的世界后室整合包',
+        downloadTitle: '下载启动器 - 我的世界后室整合包',
         
         // 导航栏
         download: '下载',
         about: '关于',
         languageToggle: 'English',
-        backToHome: '返回主页',
+        backToHome: '返回首页',
         
         // Logo
         subtitle: '我的世界整合包',
         
         // 海报区域
-        posterAlt: 'Backroom 整合包海报',
+        posterAlt: '后室整合包海报',
         
         // 下载部分
-        downloadSectionTitle: '下载/观看',
+        downloadSectionTitle: '下载与观看',
         stepsTitle: '步骤',
         step1: '下载启动器',
-        step2: '观看教程视频',
+        step2: '下载必要文件',
+        step3: '下载整合包',
+        step4: '观看教程视频',
         downloadBtn1: '下载启动器',
-        downloadBtn2: '观看教程',
-        downloadBtn3: '皮肤设置',
+        downloadBtn2: '下载必要文件',
+        downloadBtn3: '下载整合包',
+        downloadBtn4: '观看教程',
         
         // 下载页面
         downloadPageTitle: '下载启动器',
-        downloadPageSubtitle: '选择您的操作系统以下载 Backroom 整合包启动器',
-        windowsVersion: 'Windows 版本',
-        windowsCompatible: '兼容 Windows 10/11',
-        macVersion: 'Mac 版本',
-        macCompatible: '兼容 macOS 10.14+',
+        downloadPageSubtitle: '选择您的操作系统以下载后室整合包启动器',
+        windowsVersion: 'Windows版本',
+        windowsCompatible: '兼容Windows 10/11',
+        macVersion: 'Mac版本',
+        macCompatible: '兼容macOS 10.14+',
         fileSize: '文件大小:',
         version: '版本:',
-        downloadForWindows: '下载 Windows 版',
-        downloadForMac: '下载 Mac 版',
+        downloadForWindows: '下载Windows版',
+        downloadForMac: '下载Mac版',
         installationInstructions: '安装说明',
         step1Title: '下载启动器',
-        step1Desc: '点击上方对应操作系统的下载按钮',
+        step1Desc: '点击上方对应您操作系统的下载按钮',
         step2Title: '运行安装程序',
         step2Desc: '找到下载的文件并运行安装程序',
         step3Title: '跟随安装向导',
         step3Desc: '按照屏幕上的指示完成安装',
         step4Title: '启动并游玩',
-        step4Desc: '启动启动器，开始您的 Backroom 冒险！',
+        step4Desc: '启动启动器，开始您的后室冒险！',
         
         // 注意事项
-        warningTitle: '⚠️ 注意事项',
+        warningTitle: '⚠️ 重要提示',
         warning1: '本整合包包含恐怖元素，请谨慎游玩',
         warning2: '推荐4-6人游玩',
         warning3: '使用游戏内语音聊天系统',
@@ -380,20 +303,21 @@ const languageTexts = {
         warning5: '遇到问题请去B站搜索',
         
         // 页脚
-        footer: '© 2025 Backroom 整合包 | 我的世界模组社区',
+        footer: '© 2025 后室整合包 | 我的世界模组社区',
         
         // 教程页面
         tutorialTitle: '教程指南',
+        necessaryFilesTitle: '安装必要文件',
         launcherErrorTitle: '启动器报错解决方法',
         modpackVideoTitle: '整合包安装视频',
         skinVideoTitle: '皮肤设置视频',
         videoDescription: '点击即可播放教程视频',
-        videoInstructions: '观看视频解决报错',
+        videoInstructions: '视频说明：',
         launcherErrorInstruction1: '观看视频解决报错',
         modpackInstruction1: '从下载页面下载并安装启动器',
-        modpackInstruction2: '启动 Backroom 整合包启动器',
+        modpackInstruction2: '启动后室整合包启动器',
         modpackInstruction3: '等待模组和资源自动下载',
-        modpackInstruction4: '开始您的 Backroom 冒险！',
+        modpackInstruction4: '开始您的后室冒险！',
         skinInstruction1: '在启动器中访问皮肤设置菜单',
         skinInstruction2: '自定义您的角色外观',
         skinInstruction3: '应用自定义皮肤和纹理',
@@ -406,7 +330,7 @@ function initLanguageToggle() {
     const toggleBtn = document.getElementById('language-toggle');
     
     // 页面加载时自动设置为中文
-    currentLanguage = 'zh';
+    const currentLanguage = 'zh';
     updatePageLanguage();
     
     // 更新按钮文本
@@ -414,20 +338,14 @@ function initLanguageToggle() {
         toggleBtn.textContent = languageTexts[currentLanguage].languageToggle;
     }
     
-    toggleBtn.addEventListener('click', function() {
-        // 切换语言
-        currentLanguage = currentLanguage === 'en' ? 'zh' : 'en';
-        
-        // 更新页面文本
-        updatePageLanguage();
-        
-        // 更新按钮文本
-        toggleBtn.textContent = languageTexts[currentLanguage].languageToggle;
-    });
+    // 移除语言切换功能，只保留中文
+    if (toggleBtn) {
+        toggleBtn.style.display = 'none'; // 隐藏语言切换按钮
+    }
 }
 
 function updatePageLanguage() {
-    const texts = languageTexts[currentLanguage];
+    const texts = languageTexts.zh;
     
     // 更新页面元数据
     document.documentElement.lang = texts.htmlLang;
@@ -443,20 +361,14 @@ function updatePageLanguage() {
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
-        if (href === '#download' || link.textContent.includes('Download') || link.textContent.includes('下载')) {
+        if (href === '#download' || link.textContent.includes('下载')) {
             link.textContent = texts.download;
-        } else if (href === '#about' || link.textContent.includes('About') || link.textContent.includes('关于')) {
+        } else if (href === '#about' || link.textContent.includes('关于')) {
             link.textContent = texts.about;
-        } else if (link.textContent.includes('Back to Home') || link.textContent.includes('返回主页')) {
+        } else if (link.textContent.includes('返回首页')) {
             link.textContent = texts.backToHome;
         }
     });
-    
-    // 更新语言切换按钮
-    const languageToggle = document.getElementById('language-toggle');
-    if (languageToggle) {
-        languageToggle.textContent = texts.languageToggle;
-    }
     
     // 更新Logo区域
     const subtitle = document.querySelector('.subtitle');
@@ -482,16 +394,19 @@ function updatePageLanguage() {
     }
     
     const stepItems = document.querySelectorAll('#download li');
-    if (stepItems.length >= 2) {
+    if (stepItems.length >= 4) {
         stepItems[0].textContent = texts.step1;
         stepItems[1].textContent = texts.step2;
+        stepItems[2].textContent = texts.step3;
+        stepItems[3].textContent = texts.step4;
     }
     
     const downloadBtns = document.querySelectorAll('.download-btn');
-    if (downloadBtns.length >= 3) {
+    if (downloadBtns.length >= 4) {
         downloadBtns[0].textContent = texts.downloadBtn1;
         downloadBtns[1].textContent = texts.downloadBtn2;
         downloadBtns[2].textContent = texts.downloadBtn3;
+        downloadBtns[3].textContent = texts.downloadBtn4;
     }
     
     // 更新下载页面内容
@@ -529,8 +444,6 @@ function updatePageLanguage() {
     if (downloadMacBtn) {
         downloadMacBtn.textContent = texts.downloadForMac;
     }
-    
-
     
     const installationInstructions = document.querySelector('.installation-instructions');
     if (installationInstructions) {
@@ -578,6 +491,11 @@ function updatePageLanguage() {
     const tutorialMainTitle = document.querySelector('.tutorial-main-title');
     if (tutorialMainTitle) {
         tutorialMainTitle.textContent = texts.tutorialTitle;
+    }
+    
+    const necessaryFilesTitle = document.querySelector('.necessary-files-title');
+    if (necessaryFilesTitle) {
+        necessaryFilesTitle.textContent = texts.necessaryFilesTitle;
     }
     
     const launcherErrorTitle = document.querySelector('.launcher-error-title');
